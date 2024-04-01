@@ -2,7 +2,7 @@ import os
 from pathlib import Path 
 
 def main(directory):
-  # gets books in books/
+  # gets books from books/
   books = os.listdir(f"./{directory}")
 
   # alternate way to check for directory existence 
@@ -51,10 +51,11 @@ def create_list_dict(dict):
     list_of_dict.append({"char": char, "num": dict[char]})
   return list_of_dict
 
-# defines how to sort dict_list
+# defines how to sort list_dict 
 def sort_on(list_dict):
   return list_dict["num"]
 
+# all reports logic isolated in gen_report(), i.e. char frequency sort and check for alphabetic chars
 def gen_report(char_list_dict, word_count, title):
   char_list_dict.sort(reverse=True, key=sort_on)
   print(f"--- report of books/{title} --- \n")
