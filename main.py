@@ -1,17 +1,17 @@
-def main():
-  # get contents of books/ from file and add it to buffer
-  file_contents = get_contents_of_book("./books/frankenstein.txt") 
+import os
 
-  # count the number of words in file
-  word_cnt = get_num_of_words(file_contents)
-
-  # create a char freq count
-  all_char_dict = char_freq_counter(file_contents)
-
-  # convert freq count dict into a sortable dict_list
-  char_list_dict = create_list_dict(all_char_dict)
-
-  gen_report(char_list_dict, word_cnt)
+def main(directory, books):
+  if os.path.isdir(directory) and len(books) > 0:
+    # get contents of books/ from file and add it to buffer
+    file_contents = get_contents_of_book(f"./{directory}/{books[0]}") 
+    # count the number of words in file
+    word_cnt = get_num_of_words(file_contents)
+    # create a char freq count
+    all_char_dict = char_freq_counter(file_contents)
+    # convert freq count dict into a sortable dict_list
+    char_list_dict = create_list_dict(all_char_dict)
+    gen_report(char_list_dict, word_cnt)
+  else: print("Please add books to the \'books/\' folder for analysis!")
 
 def get_contents_of_book(filepath):
   with open(filepath) as file:
@@ -50,4 +50,4 @@ def gen_report(char_list_dict, word_count):
     if item["char"].isalpha():
       print(f"The \'{item["char"]}\' character was found {item["num"]} times")
 
-main()
+main("books", ["frankenstein.txt"])
