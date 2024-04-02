@@ -1,6 +1,6 @@
---- report of books/metamorphosis.txt --- 
+--- report of books/metamorphosis.txt ---
 
-25058 words found in document. 
+25058 words found in document.
 
 The 'e' character was found 13788 times
 The 't' character was found 10559 times

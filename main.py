@@ -1,5 +1,6 @@
 import os
 from pathlib import Path 
+import subprocess
 
 def main(directory):
   # gets books from books/
@@ -60,11 +61,17 @@ def sort_on(list_dict):
 # all reports logic isolated in gen_report(), i.e. char frequency sort and check for alphabetic chars
 def gen_report(char_list_dict, word_count, title):
   char_list_dict.sort(reverse=True, key=sort_on)
-  print(f"--- report of books/{title} --- \n")
-  print(f"{word_count} words found in document. \n")
+  report = []
+  report.append(f"--- report of books/{title} ---\n")
+  report.append("\n")
+  report.append(f"{word_count} words found in document.\n")
+  report.append("\n")
   for item in char_list_dict:
     if item["char"].isalpha():
-      print(f"The \'{item["char"]}\' character was found {item["num"]} times")
-  print("\n")
+      report.append(f"The \'{item["char"]}\' character was found {item["num"]} times\n")
+  subprocess.run(["bash", "./reports_setup.sh"])
+  with open(f"./reports/report_{title}", "w") as f:
+    for line in report:
+      f.write(line)
 
 # main("books")

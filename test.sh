@@ -7,7 +7,7 @@ wait
 curl https://www.gutenberg.org/cache/epub/5200/pg5200.txt -o "metamorphosis.txt"
 wait
 cd ..
-pytest unit_tests.py
+pytest unit_tests.py -vv
 rm -r ./test_helpers/__pycache__
 rm -r .pytest_cache
 rm -r __pycache__

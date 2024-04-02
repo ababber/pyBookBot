@@ -1,6 +1,6 @@
---- report of books/frankenstein.txt --- 
+--- report of books/frankenstein.txt ---
 
-78101 words found in document. 
+78101 words found in document.
 
 The 'e' character was found 46094 times
 The 't' character was found 30379 times
