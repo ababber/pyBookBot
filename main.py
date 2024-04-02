@@ -13,6 +13,7 @@ def main(directory):
       curr_path = f"{Path.cwd()}/{directory}/{book}"
       _, file_ext = os.path.splitext(curr_path)
       is_text_file = file_ext == ".txt"
+      # TODO: review the following line
       if (Path.cwd() / directory / book).exists() and is_text_file:
         # get contents of books/ from file and add it to memory 
         file_contents = get_contents_of_book(f"./{directory}/{book}") 
@@ -23,8 +24,8 @@ def main(directory):
         # convert freq count dict into a sortable dict_list
         char_list_dict = create_list_dict(all_char_dict)
         gen_report(char_list_dict, word_cnt, book)
-      else: print("Please add books to the \'books/\' folder for analysis and ensure they are \'.txt\' files")
-  else: print("Please add books to the \'books/\' folder for analysis! Books can be found at https://www.gutenberg.org/")
+      else: return "Please add books to the \'books/\' folder for analysis and ensure they are \'.txt\' files"
+  else: return "Please add books to the \'books/\' folder for analysis! Books can be found at https://www.gutenberg.org/"
 
 def get_contents_of_book(filepath):
   with open(filepath) as file:
@@ -45,6 +46,7 @@ def char_freq_counter(words):
     else: freq_cntr[char] = 1
   return freq_cntr
 
+# TODO find a way to sort freq_cntr directly
 def create_list_dict(dict):
   list_of_dict = []
   for char in dict:
@@ -65,4 +67,4 @@ def gen_report(char_list_dict, word_count, title):
       print(f"The \'{item["char"]}\' character was found {item["num"]} times")
   print("\n")
 
-main("books")
+# main("books")

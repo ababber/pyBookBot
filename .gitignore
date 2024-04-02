@@ -1,5 +1,5 @@
-# pyBookBot specific
-books/
+# macOS specific files to ignore
+*.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

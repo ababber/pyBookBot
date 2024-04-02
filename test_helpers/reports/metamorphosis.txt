@@ -1,0 +1,31 @@
+--- report of books/metamorphosis.txt --- 
+
+25058 words found in document. 
+
+The 'e' character was found 13788 times
+The 't' character was found 10559 times
+The 'o' character was found 8869 times
+The 'a' character was found 8072 times
+The 'h' character was found 7655 times
+The 'i' character was found 7122 times
+The 'n' character was found 6962 times
+The 'r' character was found 6674 times
+The 's' character was found 6457 times
+The 'd' character was found 4723 times
+The 'l' character was found 4418 times
+The 'u' character was found 2986 times
+The 'g' character was found 2789 times
+The 'w' character was found 2670 times
+The 'm' character was found 2600 times
+The 'c' character was found 2535 times
+The 'f' character was found 2491 times
+The 'y' character was found 1976 times
+The 'p' character was found 1713 times
+The 'b' character was found 1656 times
+The 'v' character was found 937 times
+The 'k' character was found 914 times
+The 'j' character was found 181 times
+The 'x' character was found 127 times
+The 'q' character was found 103 times
+The 'z' character was found 22 times
+The 'ç' character was found 1 times
