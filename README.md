@@ -13,8 +13,8 @@
 
 ## to do
 
-- [ ] change `main.py` to `pyBookBot.py`
-- [ ] convert all `test.sh`, `reports_setup.sh`, `test_helper0.sh`, `test_helper1.sh`, `test_cleanup0.sh`, `test_cleanup1.sh` to python f(n)s
-- [ ] use `main` idiom on line 81
-- [ ] take source download link and filename from user
+- [ ] change `main.py` to `py_book_bot.py`
+- [ ] convert `test.sh`, `reports_setup.sh`, `test_helper0.sh`, `test_helper1.sh`, `test_cleanup0.sh`, `test_cleanup1.sh` scripts to `python` modules
+- [ ] use `main` idiom on line 81 of `main.py`
+- [ ] take book file download link and filename from user as `stdin`
 - [ ] determine if downloaded file is a text file (bytecode?), go above and beyond extension checking
