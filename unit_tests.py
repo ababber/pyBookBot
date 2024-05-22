@@ -1,10 +1,10 @@
 import pyBookBot
-from test_helpers import freq_cntr_test
-from test_helpers import list_dict_test
 import json
 import os
-from pathlib import Path
 import subprocess
+from test_helpers import freq_cntr_test
+from test_helpers import list_dict_test
+from pathlib import Path
 
 directory = "books"
 books = os.listdir(f"./{directory}")
@@ -15,11 +15,17 @@ def test_books_dir_exists():
 def test_a_book_exists_in_books_dir():
   assert len(books) > 0, "should have at least a book to run project on" 
 
-def test_book_formats():
+def test_book_extension():
   for book in books:
     curr_path = f"{Path.cwd()}/{directory}/{book}"
     _, file_ext = os.path.splitext(curr_path)
     assert file_ext == ".txt", "should have .txt file type"
+
+def test_book_mimetype():
+  for book in books:
+      curr_path = f"{Path.cwd()}/{directory}/{book}"
+      mime = subprocess.run(["file", "-I", "--mime", f"{curr_path}"],  capture_output=True, text=True)
+      assert mime.stdout[-26:] == "text/plain; charset=utf-8\n", "should have text/plain mime type"
 
 def test_books_extracted_correctly():
   book_path = f"./{directory}/{books[0]}"

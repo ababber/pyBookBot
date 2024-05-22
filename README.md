@@ -12,11 +12,12 @@
     * tests can be run in a `shell` via `./test.sh`
     * depends on `pytest` as the test runner
     * added `python pyBookBot.py test.sh` command line entry point (assuming local namespace uses `python` for running `.py` files)
+    * added check for mime type using sys command `file` (if current OS does not have `file`, mime type test will fail)
 
 ## to do
 
 * [ ] convert all `test.sh`, `reports_setup.sh`, `test_helper0.sh`, `test_helper1.sh`, `test_cleanup0.sh`, `test_cleanup1.sh` to python f(n)s
 * [ ] take source download link and filename from user
-* [ ] determine if downloaded file is a text file (bytecode?), go above and beyond extension checking
+* [X] determine if downloaded file is a text file (bytecode?), go above and beyond extension checking
 * [X] use `main` idiom on line 81
 * [X] change `main.py` to `pyBookBot.py`
