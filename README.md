@@ -1,5 +1,7 @@
 # pyBookBot
 
+## depends on `macOS`/`linux`, `python > 3.7`, `pytest`, `bash`/`zsh`, `file`, `curl`, `touch`, `rm`, `touch`
+
 ## description
 
 * A `boot.dev` guided project.
@@ -10,7 +12,6 @@
   * `pyBookBot` also checks the reports and error messages that should be generated.
   * added unit tests to `pyBookBot`
     * tests can be run in a `shell` via `./test.sh`
-    * depends on `pytest` as the test runner
     * added `python pyBookBot.py test.sh` command line entry point (assuming local namespace uses `python` for running `.py` files)
     * added check for mime type using sys command `file` (if current OS does not have `file`, mime type test will fail)
 
