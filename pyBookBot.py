@@ -1,6 +1,7 @@
+import sys
 import os
-from pathlib import Path 
 import subprocess
+from pathlib import Path 
 
 def main(directory):
   # gets books from books/
@@ -74,4 +75,10 @@ def gen_report(char_list_dict, word_count, title):
     for line in report:
       f.write(line)
 
-# main("books")
+if __name__ == "__main__":
+  sys.tracebacklimit = 0
+  if len(sys.argv) == 2 and sys.argv[1] == "test.sh":
+    test = sys.argv[1]
+    subprocess.run(["bash", f"{test}"])
+  else:
+    raise Exception("Test file argument missing...did you mean to type: 'python pyBookBot.py test.sh'?")
