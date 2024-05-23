@@ -1,3 +1,7 @@
+# pyBookBot specific
+books/
+reports/
+
 # macOS specific files to ignore
 *.DS_Store
 

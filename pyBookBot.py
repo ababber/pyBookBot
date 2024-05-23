@@ -77,8 +77,11 @@ def gen_report(char_list_dict, word_count, title):
 
 if __name__ == "__main__":
   sys.tracebacklimit = 0
-  if len(sys.argv) == 2 and sys.argv[1] == "test.sh":
-    test = sys.argv[1]
-    subprocess.run(["bash", f"{test}"])
+  if len(sys.argv) == 2 and sys.argv[1] == "test":
+    subprocess.run(["bash", f"test.sh"])
+  elif len(sys.argv) == 2 and sys.argv[1] == "run":
+    subprocess.run(["bash", "./prep.sh"])
+    main("books")
+    print("Reports generated...")
   else:
-    raise Exception("Test file argument missing...did you mean to type: 'python pyBookBot.py test.sh'?")
+    raise Exception("Argument missing...did you mean to type: 'python pyBookBot.py run' or 'python pyBookBot.py test'?")

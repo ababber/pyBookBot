@@ -17,6 +17,7 @@
 
 ## to do
 
+* [ ] add `main` and `test` option to cli and add a `prepPyBookBot.py` module to run `python pyBookBot.py main`
 * [ ] convert all `test.sh`, `reports_setup.sh`, `test_helper0.sh`, `test_helper1.sh`, `test_cleanup0.sh`, `test_cleanup1.sh` to python f(n)s
 * [ ] take source download link and filename from user
 * [X] determine if downloaded file is a text file (bytecode?), go above and beyond extension checking
