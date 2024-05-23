@@ -2,6 +2,14 @@
 
 ## depends on `macOS`/`linux`, `python > 3.7`, `pytest`, `bash`/`zsh`, `file`, `curl`, `touch`, `rm`, `touch`
 
+## running and testing
+
+* assuming local shell environment command for python interpreter is `python`
+* `python pyBookBot.py run`
+  * downloads `books/`, runs the program, and outputs results to `reports/`
+* `python pyBookBot.py test`
+  * runs tests and cleans up `books/` and `reports/`
+
 ## description
 
 * A `boot.dev` guided project.
