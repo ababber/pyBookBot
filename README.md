@@ -5,23 +5,25 @@
 ## running and testing
 
 * assuming local shell environment command for python interpreter is `python`
-* `python pyBookBot.py run`
+* run program in shell with: `python pyBookBot.py run`
   * downloads `books/`, runs the program, and outputs results to `reports/`
-* `python pyBookBot.py test`
+* run tests with: `python pyBookBot.py test`
   * runs tests and cleans up `books/` and `reports/`
 
 ## description
 
 * A `boot.dev` guided project.
-  * everything after commit id: `432051146baee1c38fc5c0cafc54271e21138107` are features added beyond scope of project.
+  * everything after commit id `432051146baee1c38fc5c0cafc54271e21138107` are features added beyond scope of project.
 * features added beyond scope of project:
-  * `pyBookBot` generates reports for more than one book.
-  * `pyBookBot` checks if a `books/` directory exists, it gets all the books in that directory, and checks if they are `.txt` files before generating a report.
-  * `pyBookBot` also checks the reports and error messages that should be generated.
+  * `pyBookBot` generates reports for more than one book and writes the reports to a file in `reports/`
   * added unit tests to `pyBookBot`
     * tests can be run in a `shell` via `./test.sh`
-    * added `python pyBookBot.py test.sh` command line entry point (assuming local shell environment uses `python` command for running `.py` files)
+    * checks if a `books/` directory exists with at least one book to write a report on
+    * tests if all data structures are created correctly
+    * tests if all output to reports from downloaded sources has not changed
+    * checks if books are `.txt` files before generating a report
     * added check for mime type using sys command `file` (if current OS does not have `file`, mime type test will fail)
+    * `pyBookBot` also checks the reports and error messages that should be generated.
 
 ## to do
 
