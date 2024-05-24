@@ -29,8 +29,9 @@
 
 ## to do
 
-* [ ] add pythonic `prepPyBookBot.py` module to run `python pyBookBot.py main`
-* [ ] convert all `test.sh`, `reports_setup.sh`, `test_helper0.sh`, `test_helper1.sh`, `test_cleanup0.sh`, `test_cleanup1.sh` to python modules
+* [ ] refactor all cleanup commands into single `cleanup.sh` file and call where needed
+* [ ] add pythonic `prepPyBookBot.py` module to run `python pyBookBot.py run`
+* [ ] convert `prep.sh`, `test.sh`, `reports_setup.sh`, `test_helper0.sh`, `test_helper1.sh`, and `cleanup.sh` to python modules
 * [ ] take source download link and filename from user
 * [X] add `main` and `test` option to cli with `shell` implementation
 * [X] determine if downloaded file is a text file (bytecode?), go above and beyond extension checking
