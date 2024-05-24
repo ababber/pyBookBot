@@ -2,6 +2,8 @@
 
 ## depends on `macOS`/`linux`, `python >= 3.7`, `pytest`, `bash`/`zsh`, `file`, `curl`, `touch`, `rm`
 
+* `pip install -r requirements.txt` for python requirements
+
 ## running and testing
 
 * assuming local shell environment command for python interpreter is `python`
