@@ -70,7 +70,7 @@ def gen_report(char_list_dict, word_count, title):
   for item in char_list_dict:
     if item["char"].isalpha():
       report.append(f"The \'{item["char"]}\' character was found {item["num"]} times\n")
-  subprocess.run(["bash", "./reports_setup.sh"])
+  subprocess.run(["bash", "./scripts/reports_setup.sh"])
   with open(f"./reports/report_{title}", "w") as f:
     for line in report:
       f.write(line)
@@ -78,9 +78,9 @@ def gen_report(char_list_dict, word_count, title):
 if __name__ == "__main__":
   sys.tracebacklimit = 0
   if len(sys.argv) == 2 and sys.argv[1] == "test":
-    subprocess.run(["bash", f"test.sh"])
+    subprocess.run(["bash", f"./scripts/test.sh"])
   elif len(sys.argv) == 2 and sys.argv[1] == "run":
-    subprocess.run(["bash", "./prep.sh"])
+    subprocess.run(["bash", "./scripts/prep.sh"])
     main("books")
     print("Reports generated...")
   else:
